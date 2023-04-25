@@ -59,7 +59,7 @@ export default function Home() {
               Mobile IV Therapy in the East Valley
             </h1>
             <div className="text-3xl drop-shadow-black">
-              MAXIMIZE YOUR BODY'S NATURAL POTENTIAL
+              MAXIMIZE YOUR BODY&apos;S NATURAL POTENTIAL
             </div>
             <div className="text-xl drop-shadow-black">
               What is IV Therapy? IV therapy delivers medical grade fluids
@@ -70,8 +70,9 @@ export default function Home() {
             <div className="text-xl drop-shadow-black">
               If you live in or are visiting Arizona, Call or Text us to create
               your custom IV Therapy at Desert IV Solutions to perfectly fit
-              your body's unique needs. Whether you're prepping or recovering,
-              IV Therapy should be on your list to do whenever possible.
+              your body&apos;s unique needs. Whether you&apos;re prepping or
+              recovering, IV Therapy should be on your list to do whenever
+              possible.
             </div>
             <div className="flex justify-center drop-shadow-xl">
               <a href="tel:4807903045">
@@ -102,7 +103,7 @@ export default function Home() {
               Group IV Therapy in The East Valley
             </h1>
             <div className="text-3xl drop-shadow-black">
-              SCHEDULE YOUR PARTY'S MOBILE IM TODAY!
+              SCHEDULE YOUR PARTY&apos;S MOBILE IM TODAY!
             </div>
             <div className="text-xl drop-shadow-black">
               Traveling to Mesa, Gilbert or Chandler with your group for an
@@ -126,7 +127,7 @@ export default function Home() {
         <div className="grow">
           {/* <div id="section-2" className="my-8 text-center">
             <h1 className="my-8">Mobile IV Therapy in the East Valley</h1>
-            <div className="my-8">MAXIMIZE YOUR BODY'S NATURAL POTENTIAL</div>
+            <div className="my-8">MAXIMIZE YOUR body&apos;s NATURAL POTENTIAL</div>
             <div className="my-8">
               What is IV Therapy? IV therapy delivers medical grade fluids
               intravenously as well as medications and vitamins directly into
@@ -136,7 +137,7 @@ export default function Home() {
             <div className="my-8">
               If you live in or are visiting Arizona, Call or Text us to create
               your custom IV Therapy at Desert IV Solutions to perfectly fit
-              your body's unique needs. Whether you're prepping or recovering,
+              your body&apos;s unique needs. Whether you&apos;re prepping or recovering,
               IV Therapy should be on your list to do whenever possible.
             </div>
 
@@ -188,15 +189,16 @@ export default function Home() {
                   <div className="p-1">
                     <h1>HYDRATE & REVITALIZE.</h1>
                     <div className="text-lg">
-                      Feeling fatigued, dealing with a migraine you can't get
-                      rid of, or has your skin lost its glow? Most people don't
-                      realize that they are already dehydrated. At Desert IV
-                      Solutions, our IV drip therapies will deliver hydration,
-                      vitamins, minerals, nutrients, medications, and
-                      antioxidants, all helping to restore your body's hydration
-                      levels. This will give you the energy you need, making you
-                      feel and look better, helping you maximize overall
-                      wellness with benefits typically lasting several days.
+                      Feeling fatigued, dealing with a migraine you can&apos;t
+                      get rid of, or has your skin lost its glow? Most people
+                      don&apos;t realize that they are already dehydrated. At
+                      Desert IV Solutions, our IV drip therapies will deliver
+                      hydration, vitamins, minerals, nutrients, medications, and
+                      antioxidants, all helping to restore your body&apos;s
+                      hydration levels. This will give you the energy you need,
+                      making you feel and look better, helping you maximize
+                      overall wellness with benefits typically lasting several
+                      days.
                     </div>
                   </div>
                   <div className="m-auto justify-self-center p-1">
@@ -218,7 +220,7 @@ export default function Home() {
         <div>
           <div id="section-5" className="my-8 py-8">
             <h1 className="mb-2 text-center">
-              Desert IV Solution's Most Popular IV's
+              Desert IV Solution&apos;s Most Popular IV&apos;s
             </h1>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               <IVOptionGridItem>
@@ -325,7 +327,7 @@ export default function Home() {
                 />
               </div>
               <div>
-                <h1>Desert Add On's</h1>
+                <h1>Desert Add On&apos;s</h1>
                 <div>$25 - $35</div>
                 <div className="gap-2">
                   <li className="list-disc">Glutathione</li>
