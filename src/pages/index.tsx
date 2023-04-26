@@ -538,8 +538,8 @@ export default function Home() {
             <div>
               <h2>We Accept The Following Payments</h2>
               <div>
-                We accept Venmo, PayPal, Zelle, PayPal, all major credit cards,
-                and cash. Our services are also HSA (Health Savings Account)
+                We accept Venmo, Zelle, PayPal, all major credit cards, and
+                cash. Our services are also HSA (Health Savings Account)
                 approved!
               </div>
             </div>
@@ -593,7 +593,7 @@ export default function Home() {
             <h3>DISCLAIMER</h3>
             <div>
               If you think you may have a medical emergency, immediately call
-              your doctor or dial 911
+              your doctor or dial 911.
             </div>
             <div>
               This website does not provide medical advice. It is intended for
