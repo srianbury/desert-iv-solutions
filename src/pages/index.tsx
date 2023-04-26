@@ -12,12 +12,42 @@ import {
 export default function Home() {
   return (
     <main className="mx-auto flex min-h-screen flex-col justify-between">
-      <Header1>
+      <div className="bg-primary">
+        <ContentContainer>
+          <div className="my-4 flex justify-between">
+            <div className="flex justify-start gap-4">
+              <Image
+                src="/images/desert-icon-sm.svg"
+                width={50}
+                height={50}
+                alt="color-logo-no-bg"
+              />
+              <h2 className="hidden items-center sm:flex">
+                Desert IV Solutions
+              </h2>
+              {/* relative flex h-12 w-12 items-center justify-center rounded-full bg-fbBlue p-8 text-center */}
+            </div>
+            <div>
+              <a
+                href="https://desertivsolutions.as.me/schedule.php"
+                target="_blank"
+                rel="noreferrer"
+                className="no-underline"
+              >
+                <div className="rounded-full border-4 border-black bg-primary p-4 text-center font-bold text-black">
+                  Schedule an Appointment!
+                </div>
+              </a>
+            </div>
+          </div>
+        </ContentContainer>
+      </div>
+      {/* <Header1>
         <Header1Item>
           <Image
-            src="/images/color-logo-no-bg.png"
-            width={200}
-            height={200}
+            src="/images/desert-icon-sm.svg"
+            width={100}
+            height={100}
             alt="color-logo-no-bg"
           />
         </Header1Item>
@@ -39,7 +69,7 @@ export default function Home() {
             </div>
           </a>
         </Header1Item>
-      </Header1>
+      </Header1> */}
 
       <div
         className="bg-[url('/images/runner-bg.png')] py-8"
@@ -219,9 +249,7 @@ export default function Home() {
       <ContentContainer>
         <div>
           <div id="section-5" className="my-8 py-8">
-            <h1 className="mb-2 text-center">
-              Desert IV Solution&apos;s Most Popular IV&apos;s
-            </h1>
+            <h1 className="mb-2 text-center">Our Most Popular IV&apos;s</h1>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               <IVOptionGridItem>
                 <IVOption
@@ -282,6 +310,21 @@ export default function Home() {
               </IVOptionGridItem>
               <IVOptionGridItem>
                 <IVOption
+                  title="Desert Beauty (For skin, nails & hair)"
+                  price={175}
+                  imageSrc="/images/desert-beauty.png"
+                  imageAlt="desert-beauty"
+                  description="Rejuvenate your skin and help combat signs of aging. Youthful restoration that focuses on hair, skin and nails."
+                  contents={[
+                    "1 Liter of Normal Saline",
+                    "B Complex (B1,B2,B3,B5,B6)",
+                    "Biotin",
+                    "Vitamin C",
+                  ]}
+                />
+              </IVOptionGridItem>
+              <IVOptionGridItem>
+                <IVOption
                   title="Desert Myer's Cocktail (Wellness for all)"
                   price={190}
                   imageSrc="/images/desert-myers-cocktail.png"
@@ -295,21 +338,6 @@ export default function Home() {
                     "Vitamin C",
                     "Zinc",
                     "Magnesium",
-                  ]}
-                />
-              </IVOptionGridItem>
-              <IVOptionGridItem>
-                <IVOption
-                  title="Desert Beauty (For skin, nails & hair)"
-                  price={175}
-                  imageSrc="/images/desert-beauty.png"
-                  imageAlt="desert-beauty"
-                  description="Rejuvenate your skin and help combat signs of aging. Youthful restoration that focuses on hair, skin and nails."
-                  contents={[
-                    "1 Liter of Normal Saline",
-                    "B Complex (B1,B2,B3,B5,B6)",
-                    "Biotin",
-                    "Vitamin C",
                   ]}
                 />
               </IVOptionGridItem>
@@ -349,37 +377,39 @@ export default function Home() {
         </div>
       </ContentContainer>
 
-      <ContentContainer>
-        <div id="section-4" className="my-8 py-8">
-          <div className="grid md:grid-cols-2">
-            <div className="p-1 md:justify-self-center">
-              <h1>Group Discounts</h1>
-              <div>A great option for parties!</div>
-              <div className="gap-2">
-                <li className="list-disc">
-                  10% discount for four to nine patients
-                </li>
-                <li className="list-disc">15% discount for 10-19 patients</li>
-                <li className="list-disc">
-                  20% discount for 20 patients and above
-                </li>
+      <div className="bg-primary">
+        <ContentContainer>
+          <div id="section-4" className="my-8 py-8">
+            <div className="grid gap-y-8 md:grid-cols-2">
+              <div className="">
+                <h1>Group Discounts</h1>
+                <div>A great option for parties!</div>
+                <div className="gap-2">
+                  <li className="list-disc">
+                    10% discount for four to nine patients
+                  </li>
+                  <li className="list-disc">15% discount for 10-19 patients</li>
+                  <li className="list-disc">
+                    20% discount for 20 patients and above
+                  </li>
+                </div>
               </div>
-            </div>
-            <div className="p-1 md:justify-self-center">
-              <h1>After Hours</h1>
-              <div>
-                <div>After - Hours $100 - $300</div>
-                <div>Extra $100 - 8 PM - Midnight</div>
-                <div>Extra $300 - Midnight - 8 AM</div>
+              <div className="">
+                <h1>After Hours</h1>
                 <div>
-                  *Subject to availability - additional fees (collected prior to
-                  the call)
+                  <div>After - Hours $100 - $300</div>
+                  <div>Extra $100 - 8 PM - Midnight</div>
+                  <div>Extra $300 - Midnight - 8 AM</div>
+                  <div>
+                    *Subject to availability - additional fees (collected prior
+                    to the call)
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </ContentContainer>
+        </ContentContainer>
+      </div>
 
       <div className="bg-primary ">
         <div
@@ -420,7 +450,7 @@ export default function Home() {
       </div>
 
       <ContentContainer>
-        <div className="grow">
+        <div className="my-8 py-8">
           <div id="section-10" className="my-8">
             <div>
               <div>
@@ -456,7 +486,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="my-8 grid gap-x-4 text-center md:grid-cols-3">
+            <div className="my-8 grid gap-4 text-center md:grid-cols-3">
               <div className="rounded-lg border-4 border-grey p-5 shadow-md">
                 <div className="m-auto justify-self-center p-1">
                   <div className="relative m-auto flex h-12 w-12 items-center justify-center rounded-full bg-grey p-8 text-center">
@@ -497,22 +527,21 @@ export default function Home() {
               </div>
             </div>
 
-            <div>TODO: Form</div>
+            {/* <div>TODO: Form</div> */}
           </div>
+        </div>
+      </ContentContainer>
 
-          <div id="section-11" className="my-8">
-            <div className="flex justify-center">
-              <Image
-                src="/images/color-logo-no-bg.png"
-                width={200}
-                height={200}
-                alt="color-logo-no-bg"
-              />
-            </div>
-            <div>We Accept The Following Payments</div>
+      <div className="bg-gray-300">
+        <ContentContainer>
+          <div id="section-11" className="my-8 grid gap-y-8 py-8">
             <div>
-              We accept cash, PayPal, Venmo, Zelle, and all major credit cards.
-              Our services are also HSA (Health Savings Account) approved!
+              <h2>We Accept The Following Payments</h2>
+              <div>
+                We accept Venmo, PayPal, Zelle, PayPal, all major credit cards,
+                and cash. Our services are also HSA (Health Savings Account)
+                approved!
+              </div>
             </div>
 
             <div className="grid gap-2 text-center md:grid-cols-5">
@@ -554,30 +583,33 @@ export default function Home() {
                 <h1>Cash</h1>
               </div>
             </div>
+          </div>
+        </ContentContainer>
+      </div>
 
-            <div className="text-center">
-              <div>DISCLAIMER</div>
-              <div>
-                If you think you may have a medical emergency, immediately call
-                your doctor or dial 911
-              </div>
-              <div>
-                This website does not provide medical advice. It is intended for
-                informational purposes only. It is not a substitute for
-                professional medical advice, diagnosis or treatment. Never
-                ignore professional medical advice in seeking treatment because
-                of something you read on the internet. These statements have not
-                been evaluated by the Food and Drug Administration.
-              </div>
+      <ContentContainer>
+        <div className="my-8 grid gap-y-8 py-8">
+          <div className="">
+            <h3>DISCLAIMER</h3>
+            <div>
+              If you think you may have a medical emergency, immediately call
+              your doctor or dial 911
             </div>
+            <div>
+              This website does not provide medical advice. It is intended for
+              informational purposes only. It is not a substitute for
+              professional medical advice, diagnosis or treatment. Never ignore
+              professional medical advice in seeking treatment because of
+              something you read on the internet. These statements have not been
+              evaluated by the Food and Drug Administration.
+            </div>
+          </div>
 
-            <div className="text-center">
-              <div>At Desert IV Solutions</div>
-              <div>Serving the East Valley</div>
-              <div>
-                Mesa, Tempe, Chandler, Gilbert, Ahwatukee, Queen Creek, San Tan
-                Valley
-              </div>
+          <div className="">
+            <div>Serving the East Valley</div>
+            <div>
+              Mesa, Tempe, Chandler, Gilbert, Ahwatukee, Queen Creek, San Tan
+              Valley
             </div>
           </div>
         </div>
@@ -671,10 +703,18 @@ function Footer() {
   return (
     <div className="bg-primary">
       <ContentContainer>
-        <div className="py-8">
-          <h2 className="text-center">
+        <div className="my-8 grid gap-y-4 py-8">
+          <div className="flex justify-center">
+            <Image
+              src="/images/color-logo-no-bg.png"
+              width={200}
+              height={200}
+              alt="color-logo-no-bg"
+            />
+          </div>
+          <h3 className="text-center">
             Desert IV Solutions - 2022 - All Rights Reserved
-          </h2>
+          </h3>
         </div>
       </ContentContainer>
     </div>
