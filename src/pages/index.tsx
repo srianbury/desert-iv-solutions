@@ -3,17 +3,13 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
-import {
-  faPhone,
-  faVoicemail,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
     <main className="mx-auto flex min-h-screen flex-col justify-between">
       <div className="bg-primary">
-        <ContentContainer>
+        <ContentContainer disableYPadding>
           <div className="my-4 flex justify-between">
             <div className="flex justify-start gap-4">
               <Image
@@ -42,6 +38,7 @@ export default function Home() {
           </div>
         </ContentContainer>
       </div>
+
       {/* <Header1>
         <Header1Item>
           <Image
@@ -81,10 +78,7 @@ export default function Home() {
         }}
       >
         <ContentContainer>
-          <div
-            id="section-2"
-            className="my-8 grid gap-y-8 py-8 text-center text-white"
-          >
+          <div id="section-2" className="grid gap-y-8 text-center text-white">
             <h1 className="text-7xl drop-shadow-black">
               Mobile IV Therapy in the East Valley
             </h1>
@@ -125,10 +119,7 @@ export default function Home() {
         }}
       >
         <ContentContainer>
-          <div
-            id="section-2"
-            className="my-8 grid gap-y-8 py-8 text-center text-white"
-          >
+          <div id="section-2" className="grid gap-y-8 text-center text-white">
             <h1 className="text-7xl drop-shadow-black">
               Group IV Therapy in The East Valley
             </h1>
@@ -153,224 +144,174 @@ export default function Home() {
         </ContentContainer>
       </div>
 
-      <ContentContainer>
-        <div className="grow">
-          {/* <div id="section-2" className="my-8 text-center">
-            <h1 className="my-8">Mobile IV Therapy in the East Valley</h1>
-            <div className="my-8">MAXIMIZE YOUR body&apos;s NATURAL POTENTIAL</div>
-            <div className="my-8">
-              What is IV Therapy? IV therapy delivers medical grade fluids
-              intravenously as well as medications and vitamins directly into
-              your bloodstream and helps provide rapid relief from fatigue, jet
-              lag, hangovers, flu symptoms, and overall dehydration.
-            </div>
-            <div className="my-8">
-              If you live in or are visiting Arizona, Call or Text us to create
-              your custom IV Therapy at Desert IV Solutions to perfectly fit
-              your body&apos;s unique needs. Whether you&apos;re prepping or recovering,
-              IV Therapy should be on your list to do whenever possible.
-            </div>
-
-            <div className="my-8 flex justify-center">
-              <a href="tel:4807903045">
-                <div className="rounded-full border-4 border-primary bg-primary p-4 text-center font-bold text-black hover:border-black">
-                  CALL NOW - (480) 790-3045
-                </div>
-              </a>
-            </div>
-          </div> */}
-
-          {/* <div id="section-3" className="my-8 text-center">
-            <h1 className="my-8">Group IV Therapy in The East Valley</h1>
-            <div className="my-8">SCHEDULE YOUR PARTY'S MOBILE IM TODAY!</div>
-            <div className="my-8">
-              Traveling to Mesa, Gilbert or Chandler with your group for an
-              event? No worries, we have you covered! We have plenty of
-              experience taking care of groups of any size. Our professional
-              staff will come out, make you feel comfortable, and help you feel
-              better right away! Our top priority is you.
-            </div>
-            <div className="my-8 flex justify-center">
-              <a href="tel:4807903045">
-                <div className="rounded-full border-4 border-primary bg-primary p-4 text-center font-bold text-black hover:border-black">
-                  CALL NOW - (480) 790-3045
-                </div>
-              </a>
-            </div>
-          </div> */}
-        </div>
-      </ContentContainer>
-
-      <div className="">
-        <div
-          className="bg-image  bg-[url('/images/bg-hydrate-revital.png')] py-8"
-          style={{
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            transition: "background 0.3s, border-radius 0.3s, opacity 0.3s",
-            position: "relative",
-          }}
-        >
-          <div className="bg-image-first-child ">
-            <ContentContainer>
-              <div id="section-4" className="my-8 py-8">
-                <div className="grid md:grid-cols-2">
-                  <div className="p-1">
-                    <h1>HYDRATE & REVITALIZE.</h1>
-                    <div className="text-lg">
-                      Feeling fatigued, dealing with a migraine you can&apos;t
-                      get rid of, or has your skin lost its glow? Most people
-                      don&apos;t realize that they are already dehydrated. At
-                      Desert IV Solutions, our IV drip therapies will deliver
-                      hydration, vitamins, minerals, nutrients, medications, and
-                      antioxidants, all helping to restore your body&apos;s
-                      hydration levels. This will give you the energy you need,
-                      making you feel and look better, helping you maximize
-                      overall wellness with benefits typically lasting several
-                      days.
-                    </div>
+      <div
+        className="bg-image  bg-[url('/images/bg-hydrate-revital.png')] py-8"
+        style={{
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          transition: "background 0.3s, border-radius 0.3s, opacity 0.3s",
+          position: "relative",
+        }}
+      >
+        <div className="bg-image-first-child ">
+          <ContentContainer>
+            <div id="section-4">
+              <div className="grid md:grid-cols-2">
+                <div className="p-1">
+                  <h1>HYDRATE & REVITALIZE.</h1>
+                  <div className="text-lg">
+                    Feeling fatigued, dealing with a migraine you can&apos;t get
+                    rid of, or has your skin lost its glow? Most people
+                    don&apos;t realize that they are already dehydrated. At
+                    Desert IV Solutions, our IV drip therapies will deliver
+                    hydration, vitamins, minerals, nutrients, medications, and
+                    antioxidants, all helping to restore your body&apos;s
+                    hydration levels. This will give you the energy you need,
+                    making you feel and look better, helping you maximize
+                    overall wellness with benefits typically lasting several
+                    days.
                   </div>
-                  <div className="m-auto justify-self-center p-1">
-                    <Image
-                      src="/images/hydrate-and-revitalize.png"
-                      width={1000}
-                      height={1000}
-                      alt="hydrate-and-revitalize"
-                    />
-                  </div>
+                </div>
+                <div className="m-auto justify-self-center p-1">
+                  <Image
+                    src="/images/hydrate-and-revitalize.png"
+                    width={1000}
+                    height={1000}
+                    alt="hydrate-and-revitalize"
+                  />
                 </div>
               </div>
-            </ContentContainer>
-          </div>
+            </div>
+          </ContentContainer>
         </div>
       </div>
 
       <ContentContainer>
-        <div>
-          <div id="section-5" className="my-8 py-8">
-            <h1 className="mb-2 text-center">Our Most Popular IV&apos;s</h1>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              <IVOptionGridItem>
-                <IVOption
-                  title="Desert Simply Dry (rehydrate)"
-                  price={100}
-                  imageSrc="/images/desert-simply-dry.png"
-                  imageAlt="desert-simply-dry"
-                  description="A quick relief at home with basic IV fluid, no additional vitamins or medicine."
-                  contents={["1 Liter of Normal saline"]}
-                />
-              </IVOptionGridItem>
-              <IVOptionGridItem>
-                <IVOption
-                  title="Desert Cold/Flu (Feeling under the weather)"
-                  price={145}
-                  imageSrc="/images/desert-cold-flu.png"
-                  imageAlt="desert-cold-flu"
-                  description="Feeling sick? Give your immune system an additional layer of protection."
-                  contents={[
-                    "1 Liter of Normal Saline",
-                    "B Complex (B1, B2, B3, B5, B6)",
-                    "B12",
-                    "Vitamin C",
-                    "Zinc",
-                  ]}
-                />
-              </IVOptionGridItem>
-              <IVOptionGridItem>
-                <IVOption
-                  title="Desert Prickly Pear (Hangover Relief)"
-                  price={155}
-                  imageSrc="/images/desert-prickly-pear.png"
-                  imageAlt="desert-prickly-pear"
-                  description="Long night of overindulgence? We will help you reverse those symptoms and feel better."
-                  contents={[
-                    "1 Liter of Normal saline",
-                    "B Complex (B1, B2, B3, B5, B6)",
-                    "Anti-nausea",
-                    "Anti-inflammatory reliever",
-                  ]}
-                />
-              </IVOptionGridItem>
-              <IVOptionGridItem>
-                <IVOption
-                  title="Desert A Performance (Athletic recovery)"
-                  price={165}
-                  imageSrc="/images/desert-a-performance.png"
-                  imageAlt="desert-a-performance"
-                  description="For athletes or fitness enthusiasts, this IV Drip combines fluids antioxidants and pain relievers that will help optimize your fitness potential for faster recovery."
-                  contents={[
-                    "1 Liter of Normal Saline",
-                    "B Complex (B1, B2, B3, B5, B6)",
-                    "Amino Blend",
-                    "Mineral Blend",
-                    "Vitamin C",
-                  ]}
-                />
-              </IVOptionGridItem>
-              <IVOptionGridItem>
-                <IVOption
-                  title="Desert Beauty (For skin, nails & hair)"
-                  price={175}
-                  imageSrc="/images/desert-beauty.png"
-                  imageAlt="desert-beauty"
-                  description="Rejuvenate your skin and help combat signs of aging. Youthful restoration that focuses on hair, skin and nails."
-                  contents={[
-                    "1 Liter of Normal Saline",
-                    "B Complex (B1,B2,B3,B5,B6)",
-                    "Biotin",
-                    "Vitamin C",
-                  ]}
-                />
-              </IVOptionGridItem>
-              <IVOptionGridItem>
-                <IVOption
-                  title="Desert Myer's Cocktail (Wellness for all)"
-                  price={190}
-                  imageSrc="/images/desert-myers-cocktail.png"
-                  imageAlt="desert-myers-cocktail"
-                  description="Created by the late Dr. John Myers, this multivitamin cocktail is effective for acute asthma attacks, migraines, fatigue (including chronic fatigue syndrome), acute muscle spasms, colds, chronic sinusitis, seasonal allergies, chronic depression/anxiety and other disorders."
-                  contents={[
-                    "1 Liter of Normal Saline",
-                    "B Complex (B1,B2.B3,B5,B6)",
-                    "B12",
-                    "Glutathione",
-                    "Vitamin C",
-                    "Zinc",
-                    "Magnesium",
-                  ]}
-                />
-              </IVOptionGridItem>
-            </div>
+        <div id="section-5">
+          <h1 className="mb-2 text-center">Our Most Popular IV&apos;s</h1>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <IVOptionGridItem>
+              <IVOption
+                title="Desert Simply Dry (rehydrate)"
+                price={100}
+                imageSrc="/images/desert-simply-dry.png"
+                imageAlt="desert-simply-dry"
+                description="A quick relief at home with basic IV fluid, no additional vitamins or medicine."
+                contents={["1 Liter of Normal saline"]}
+              />
+            </IVOptionGridItem>
+            <IVOptionGridItem>
+              <IVOption
+                title="Desert Cold/Flu (Feeling under the weather)"
+                price={145}
+                imageSrc="/images/desert-cold-flu.png"
+                imageAlt="desert-cold-flu"
+                description="Feeling sick? Give your immune system an additional layer of protection."
+                contents={[
+                  "1 Liter of Normal Saline",
+                  "B Complex (B1, B2, B3, B5, B6)",
+                  "B12",
+                  "Vitamin C",
+                  "Zinc",
+                ]}
+              />
+            </IVOptionGridItem>
+            <IVOptionGridItem>
+              <IVOption
+                title="Desert Prickly Pear (Hangover Relief)"
+                price={155}
+                imageSrc="/images/desert-prickly-pear.png"
+                imageAlt="desert-prickly-pear"
+                description="Long night of overindulgence? We will help you reverse those symptoms and feel better."
+                contents={[
+                  "1 Liter of Normal saline",
+                  "B Complex (B1, B2, B3, B5, B6)",
+                  "Anti-nausea",
+                  "Anti-inflammatory reliever",
+                ]}
+              />
+            </IVOptionGridItem>
+            <IVOptionGridItem>
+              <IVOption
+                title="Desert A Performance (Athletic recovery)"
+                price={165}
+                imageSrc="/images/desert-a-performance.png"
+                imageAlt="desert-a-performance"
+                description="For athletes or fitness enthusiasts, this IV Drip combines fluids antioxidants and pain relievers that will help optimize your fitness potential for faster recovery."
+                contents={[
+                  "1 Liter of Normal Saline",
+                  "B Complex (B1, B2, B3, B5, B6)",
+                  "Amino Blend",
+                  "Mineral Blend",
+                  "Vitamin C",
+                ]}
+              />
+            </IVOptionGridItem>
+            <IVOptionGridItem>
+              <IVOption
+                title="Desert Beauty (For skin, nails & hair)"
+                price={175}
+                imageSrc="/images/desert-beauty.png"
+                imageAlt="desert-beauty"
+                description="Rejuvenate your skin and help combat signs of aging. Youthful restoration that focuses on hair, skin and nails."
+                contents={[
+                  "1 Liter of Normal Saline",
+                  "B Complex (B1,B2,B3,B5,B6)",
+                  "Biotin",
+                  "Vitamin C",
+                ]}
+              />
+            </IVOptionGridItem>
+            <IVOptionGridItem>
+              <IVOption
+                title="Desert Myer's Cocktail (Wellness for all)"
+                price={190}
+                imageSrc="/images/desert-myers-cocktail.png"
+                imageAlt="desert-myers-cocktail"
+                description="Created by the late Dr. John Myers, this multivitamin cocktail is effective for acute asthma attacks, migraines, fatigue (including chronic fatigue syndrome), acute muscle spasms, colds, chronic sinusitis, seasonal allergies, chronic depression/anxiety and other disorders."
+                contents={[
+                  "1 Liter of Normal Saline",
+                  "B Complex (B1,B2.B3,B5,B6)",
+                  "B12",
+                  "Glutathione",
+                  "Vitamin C",
+                  "Zinc",
+                  "Magnesium",
+                ]}
+              />
+            </IVOptionGridItem>
           </div>
+        </div>
+      </ContentContainer>
 
-          <div id="section-6" className="my-8">
-            <div className="grid gap-4 md:grid-cols-2">
-              <div className="m-auto justify-self-center p-1">
-                <Image
-                  src="/images/desert-add-ons.png"
-                  width={1000}
-                  height={1000}
-                  alt="desert-add-ons"
-                />
-              </div>
-              <div>
-                <h1>Desert Add On&apos;s</h1>
-                <div>$25 - $35</div>
-                <div className="gap-2">
-                  <li className="list-disc">Glutathione</li>
-                  <li className="list-disc">Vitamin C</li>
-                  <li className="list-disc">Zinc</li>
-                  <li className="list-disc">Magnesium</li>
-                  <li className="list-disc">Zofran -Anti-nausea </li>
-                  <li className="list-disc">
-                    Toradol- Anti-inflammatory/Pain reliever
-                  </li>
-                  <li className="list-disc">
-                    Pepcid- Antacid/Heartburn reliever
-                  </li>
-                  <li className="list-disc">Benadryl- Antihistamine</li>
-                </div>
+      <ContentContainer>
+        <div id="section-6">
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="m-auto justify-self-center p-1">
+              <Image
+                src="/images/desert-add-ons.png"
+                width={1000}
+                height={1000}
+                alt="desert-add-ons"
+              />
+            </div>
+            <div>
+              <h1>Desert Add On&apos;s</h1>
+              <div>$25 - $35</div>
+              <div className="gap-2">
+                <li className="list-disc">Glutathione</li>
+                <li className="list-disc">Vitamin C</li>
+                <li className="list-disc">Zinc</li>
+                <li className="list-disc">Magnesium</li>
+                <li className="list-disc">Zofran -Anti-nausea </li>
+                <li className="list-disc">
+                  Toradol- Anti-inflammatory/Pain reliever
+                </li>
+                <li className="list-disc">
+                  Pepcid- Antacid/Heartburn reliever
+                </li>
+                <li className="list-disc">Benadryl- Antihistamine</li>
               </div>
             </div>
           </div>
@@ -379,7 +320,7 @@ export default function Home() {
 
       <div className="bg-primary">
         <ContentContainer>
-          <div id="section-4" className="my-8 py-8">
+          <div id="section-4">
             <div className="grid gap-y-8 md:grid-cols-2">
               <div className="">
                 <h1>Group Discounts</h1>
@@ -411,9 +352,9 @@ export default function Home() {
         </ContentContainer>
       </div>
 
-      <div className="bg-primary ">
+      <div className="bg-primary">
         <div
-          className="bg-[url('/images/feel-good.png')] py-20"
+          className="bg-[url('/images/feel-good.png')] py-8"
           style={{
             backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
@@ -422,10 +363,7 @@ export default function Home() {
           }}
         >
           <ContentContainer>
-            <div
-              id="section-9"
-              className="my-8 py-8 text-white drop-shadow-black"
-            >
+            <div id="section-9" className="text-white drop-shadow-black">
               <h1>Feel Good Inside & Out!</h1>
               <div>
                 IV Therapy is the fastest way to get your body the vitamins and
@@ -450,91 +388,85 @@ export default function Home() {
       </div>
 
       <ContentContainer>
-        <div className="my-8 py-8">
-          <div id="section-10" className="my-8">
+        <div id="section-10">
+          <div>
             <div>
-              <div>
-                <h1 className="text-center">Contact Us!</h1>
-                <div className="flex justify-center gap-4">
-                  <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-fbBlue p-8 text-center">
-                    <a
-                      href="https://www.facebook.com/desertivsolutions"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <FontAwesomeIcon
-                        icon={faFacebook}
-                        color="white"
-                        size="2xl"
-                      />
-                    </a>
-                  </div>
-                  <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-igPurpleRed p-8 text-center">
-                    <a
-                      href="https://www.instagram.com/desertivsolutions/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <FontAwesomeIcon
-                        icon={faInstagram}
-                        color="white"
-                        size="2xl"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="my-8 grid gap-4 text-center md:grid-cols-3">
-              <div className="rounded-lg border-4 border-grey p-5 shadow-md">
-                <div className="m-auto justify-self-center p-1">
-                  <div className="relative m-auto flex h-12 w-12 items-center justify-center rounded-full bg-grey p-8 text-center">
-                    <FontAwesomeIcon icon={faClock} color="black" size="2xl" />
-                  </div>
-                  <div className="mt-2">
-                    <div>Hours of Operation</div>
-                    <div>By Appointment Only</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-lg border-4 border-grey p-5 shadow-md">
-                <div className="m-auto justify-self-center p-1">
-                  <div className="relative m-auto flex h-12 w-12 items-center justify-center rounded-full bg-grey p-8 text-center">
+              <h1 className="text-center">Contact Us!</h1>
+              <div className="flex justify-center gap-4">
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-fbBlue p-8 text-center">
+                  <a
+                    href="https://www.facebook.com/desertivsolutions"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <FontAwesomeIcon
-                      icon={faEnvelope}
-                      color="black"
+                      icon={faFacebook}
+                      color="white"
                       size="2xl"
                     />
-                  </div>
-                  <div className="mt-2">
-                    <div>Email</div>
-                    <div>riza@desertivsolutions.com</div>
-                  </div>
+                  </a>
+                </div>
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-igPurpleRed p-8 text-center">
+                  <a
+                    href="https://www.instagram.com/desertivsolutions/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={faInstagram}
+                      color="white"
+                      size="2xl"
+                    />
+                  </a>
                 </div>
               </div>
-              <div className="rounded-lg border-4 border-grey p-5 shadow-md">
-                <div className="m-auto justify-self-center p-1">
-                  <div className="relative m-auto flex h-12 w-12 items-center justify-center rounded-full bg-grey p-8 text-center">
-                    <FontAwesomeIcon icon={faPhone} color="black" size="2xl" />
-                  </div>
-                  <div className="mt-2">
-                    <div>Phone</div>
-                    <div>480 - 790 - 3045</div>
-                  </div>
+            </div>
+          </div>
+
+          <div className="my-8 grid gap-4 text-center md:grid-cols-3">
+            <div className="rounded-lg border-4 border-grey p-5 shadow-md">
+              <div className="m-auto justify-self-center p-1">
+                <div className="relative m-auto flex h-12 w-12 items-center justify-center rounded-full bg-grey p-8 text-center">
+                  <FontAwesomeIcon icon={faClock} color="black" size="2xl" />
+                </div>
+                <div className="mt-2">
+                  <div>Hours of Operation</div>
+                  <div>By Appointment Only</div>
                 </div>
               </div>
             </div>
 
-            {/* <div>TODO: Form</div> */}
+            <div className="rounded-lg border-4 border-grey p-5 shadow-md">
+              <div className="m-auto justify-self-center p-1">
+                <div className="relative m-auto flex h-12 w-12 items-center justify-center rounded-full bg-grey p-8 text-center">
+                  <FontAwesomeIcon icon={faEnvelope} color="black" size="2xl" />
+                </div>
+                <div className="mt-2">
+                  <div>Email</div>
+                  <div>riza@desertivsolutions.com</div>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-lg border-4 border-grey p-5 shadow-md">
+              <div className="m-auto justify-self-center p-1">
+                <div className="relative m-auto flex h-12 w-12 items-center justify-center rounded-full bg-grey p-8 text-center">
+                  <FontAwesomeIcon icon={faPhone} color="black" size="2xl" />
+                </div>
+                <div className="mt-2">
+                  <div>Phone</div>
+                  <div>480 - 790 - 3045</div>
+                </div>
+              </div>
+            </div>
           </div>
+
+          {/* <div>TODO: Form</div> */}
         </div>
       </ContentContainer>
 
       <div className="bg-gray-300">
         <ContentContainer>
-          <div id="section-11" className="my-8 grid gap-y-8 py-8">
+          <div id="section-11" className="grid gap-y-8">
             <div>
               <h2>We Accept The Following Payments</h2>
               <div>
@@ -588,7 +520,7 @@ export default function Home() {
       </div>
 
       <ContentContainer>
-        <div className="my-8 grid gap-y-8 py-8">
+        <div className="grid gap-y-8">
           <div className="">
             <h3>DISCLAIMER</h3>
             <div>
@@ -703,7 +635,7 @@ function Footer() {
   return (
     <div className="bg-primary">
       <ContentContainer>
-        <div className="my-8 grid gap-y-4 py-8">
+        <div className="grid gap-y-4">
           <div className="flex justify-center">
             <Image
               src="/images/color-logo-no-bg.png"
@@ -723,7 +655,19 @@ function Footer() {
 
 type ContentContainerProps = {
   children: ReactNode;
+  disableYPadding?: boolean;
 };
-function ContentContainer({ children }: ContentContainerProps) {
-  return <div className="container mx-auto px-4">{children}</div>;
+function ContentContainer({
+  children,
+  disableYPadding,
+}: ContentContainerProps) {
+  return (
+    <div
+      className={`container mx-auto px-4 ${
+        disableYPadding === true ? "" : "my-10 py-10"
+      }`}
+    >
+      {children}
+    </div>
+  );
 }
