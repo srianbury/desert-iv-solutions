@@ -1,9 +1,16 @@
-import { ReactNode } from "react";
+import { useState, ReactNode } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { useForm } from "@formspree/react";
+import { Formik, ErrorMessage, FormikHelpers } from "formik";
+import * as Yup from "yup";
+import {
+  useNotification,
+  NotificationContainer,
+} from "@/utils/useNotification";
 
 export default function Home() {
   return (
@@ -443,7 +450,7 @@ export default function Home() {
                 </div>
                 <div className="mt-2">
                   <div>Email</div>
-                  <div>riza@desertivsolutions.com</div>
+                  <div>desertIVsolutions@gmail.com</div>
                 </div>
               </div>
             </div>
@@ -454,13 +461,13 @@ export default function Home() {
                 </div>
                 <div className="mt-2">
                   <div>Phone</div>
-                  <div>480 - 790 - 3045</div>
+                  <div>(480) 790-3045</div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* <div>TODO: Form</div> */}
+          <ContactForm />
         </div>
       </ContentContainer>
 
@@ -669,5 +676,244 @@ function ContentContainer({
     >
       {children}
     </div>
+  );
+}
+
+type FormEntry = {
+  name: string;
+  phoneNumber: string;
+  email: string;
+  address: string;
+  message: string;
+};
+
+const initialValues: FormEntry = {
+  name: "",
+  phoneNumber: "",
+  email: "",
+  address: "",
+  message: "",
+};
+
+type FormStatus = "NONE" | "SUCCESS" | "ERROR";
+const initialStatus: FormStatus = "NONE";
+
+const contactFormValidation = Yup.object({
+  name: Yup.string().required("Name is required."),
+  phoneNumber: Yup.string().required("Phone number is required."),
+  email: Yup.string()
+    .email("Please provide a valid email address.")
+    .required("Email is required."),
+  message: Yup.string().required("Message is required."),
+});
+
+type FormErrorProps = {
+  message: string;
+};
+function FormError({ message }: FormErrorProps) {
+  return (
+    <div
+      className="relative mt-3 rounded border border-red-400 bg-red-100 px-4 py-2 text-red-700"
+      role="alert"
+    >
+      <span className="block sm:inline">{message}</span>
+    </div>
+  );
+}
+
+type FormikErrorProps = {
+  name: string;
+};
+function FormikError({ name }: FormikErrorProps) {
+  return (
+    <ErrorMessage name={name}>
+      {(message) => <FormError message={message} />}
+    </ErrorMessage>
+  );
+}
+
+function ContactForm() {
+  const formspreeSubmit = useForm(process.env.NEXT_PUBLIC_FORM!)[1];
+
+  async function handleSubmit(
+    values: FormEntry,
+    formikHelpers: FormikHelpers<FormEntry>
+  ) {
+    try {
+      formikHelpers.setStatus("NONE");
+      formspreeSubmit({
+        Name: values.name,
+        "Phone Number": values.phoneNumber,
+        Email: values.email,
+        Address: values.address,
+        Message: values.message,
+      });
+      formikHelpers.setStatus("SUCCESS");
+    } catch (e) {
+      formikHelpers.setStatus("ERROR");
+    }
+  }
+
+  return (
+    <Formik
+      initialValues={initialValues}
+      validationSchema={contactFormValidation}
+      onSubmit={handleSubmit}
+      initialStatus={initialStatus}
+    >
+      {(formik) => (
+        <form
+          onSubmit={formik.handleSubmit}
+          className="grid gap-4 rounded bg-white p-8 shadow-md"
+        >
+          <div>
+            <label
+              htmlFor="name"
+              className="mb-2 block text-sm font-bold text-gray-700"
+            >
+              Name
+            </label>
+            <input
+              id="name"
+              type="text"
+              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+              placeholder="Name"
+              {...formik.getFieldProps("name")}
+            />
+            <FormikError name="name" />
+          </div>
+
+          <div>
+            <label
+              htmlFor="phoneNumber"
+              className="mb-2 block text-sm font-bold text-gray-700"
+            >
+              Phone Number
+            </label>
+            <input
+              id="phoneNumber"
+              type="text"
+              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+              placeholder="Phone Number"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.phoneNumber}
+            />
+            <FormikError name="phoneNumber" />
+          </div>
+
+          <div>
+            <label
+              htmlFor="email"
+              className="mb-2 block text-sm font-bold text-gray-700"
+            >
+              Email Address
+            </label>
+            <input
+              id="email"
+              type="email"
+              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+              placeholder="example@mail.com"
+              {...formik.getFieldProps("email")}
+            />
+            <FormikError name="email" />
+          </div>
+
+          <div>
+            <label
+              htmlFor="address"
+              className="mb-2 block text-sm font-bold text-gray-700"
+            >
+              Address
+            </label>
+            <textarea
+              id="address"
+              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+              placeholder="Optional"
+              rows={3}
+              {...formik.getFieldProps("address")}
+            />
+            <FormikError name="address" />
+          </div>
+
+          <div>
+            <label
+              htmlFor="message"
+              className="mb-2 block text-sm font-bold text-gray-700"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+              placeholder=""
+              rows={3}
+              {...formik.getFieldProps("message")}
+            />
+            <FormikError name="message" />
+          </div>
+
+          <button
+            type="submit"
+            disabled={formik.isSubmitting}
+            className="focus:shadow-outline rounded bg-primary px-4 py-2 font-bold text-white focus:outline-none"
+          >
+            Submit
+          </button>
+
+          {formik.status === "SUCCESS" && (
+            <div
+              className="relative mt-3 rounded border border-green-400 bg-green-100 px-4 py-2 text-green-700"
+              role="alert"
+            >
+              <span className="block sm:inline">
+                Thank you! We have received your message and will get back to
+                you as soon as we can.
+              </span>
+              <span
+                className="absolute bottom-0 right-0 top-0 px-4 py-2"
+                onClick={() => formik.setStatus("NONE")}
+              >
+                <svg
+                  className="h-6 w-6 fill-current text-green-500"
+                  role="button"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <title>Close</title>
+                  <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+                </svg>
+              </span>
+            </div>
+          )}
+
+          {formik.status === "ERROR" && (
+            <div
+              className="relative mt-3 rounded border border-red-400 bg-red-100 px-4 py-2 text-red-700"
+              role="alert"
+            >
+              <span className="block sm:inline">
+                An unexpected error occurred. Please try again or reach out to
+                us at desertIVsolutions@gmail.com
+              </span>
+              <span
+                className="absolute bottom-0 right-0 top-0 px-4 py-2"
+                onClick={() => formik.setStatus("NONE")}
+              >
+                <svg
+                  className="h-6 w-6 fill-current text-red-500"
+                  role="button"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <title>Close</title>
+                  <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+                </svg>
+              </span>
+            </div>
+          )}
+        </form>
+      )}
+    </Formik>
   );
 }
