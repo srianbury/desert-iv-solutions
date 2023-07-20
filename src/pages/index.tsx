@@ -201,7 +201,7 @@ export default function Home() {
             <IVOptionGridItem>
               <IVOption
                 title="Desert Simply Dry (rehydrate)"
-                price={100}
+                price={110}
                 imageSrc="/images/desert-simply-dry.png"
                 imageAlt="desert-simply-dry"
                 description="A quick relief at home with basic IV fluid, no additional vitamins or medicine."
@@ -211,7 +211,7 @@ export default function Home() {
             <IVOptionGridItem>
               <IVOption
                 title="Desert Cold/Flu (Feeling under the weather)"
-                price={145}
+                price={165}
                 imageSrc="/images/desert-cold-flu.png"
                 imageAlt="desert-cold-flu"
                 description="Feeling sick? Give your immune system an additional layer of protection."
@@ -227,7 +227,7 @@ export default function Home() {
             <IVOptionGridItem>
               <IVOption
                 title="Desert Prickly Pear (Hangover Relief)"
-                price={155}
+                price={175}
                 imageSrc="/images/desert-prickly-pear.png"
                 imageAlt="desert-prickly-pear"
                 description="Long night of overindulgence? We will help you reverse those symptoms and feel better."
@@ -242,7 +242,7 @@ export default function Home() {
             <IVOptionGridItem>
               <IVOption
                 title="Desert A Performance (Athletic recovery)"
-                price={165}
+                price={195}
                 imageSrc="/images/desert-a-performance.png"
                 imageAlt="desert-a-performance"
                 description="For athletes or fitness enthusiasts, this IV Drip combines fluids antioxidants and pain relievers that will help optimize your fitness potential for faster recovery."
@@ -258,7 +258,7 @@ export default function Home() {
             <IVOptionGridItem>
               <IVOption
                 title="Desert Beauty (For skin, nails & hair)"
-                price={175}
+                price={185}
                 imageSrc="/images/desert-beauty.png"
                 imageAlt="desert-beauty"
                 description="Rejuvenate your skin and help combat signs of aging. Youthful restoration that focuses on hair, skin and nails."
@@ -273,7 +273,7 @@ export default function Home() {
             <IVOptionGridItem>
               <IVOption
                 title="Desert Myer's Cocktail (Wellness for all)"
-                price={190}
+                price={200}
                 imageSrc="/images/desert-myers-cocktail.png"
                 imageAlt="desert-myers-cocktail"
                 description="Created by the late Dr. John Myers, this multivitamin cocktail is effective for acute asthma attacks, migraines, fatigue (including chronic fatigue syndrome), acute muscle spasms, colds, chronic sinusitis, seasonal allergies, chronic depression/anxiety and other disorders."
