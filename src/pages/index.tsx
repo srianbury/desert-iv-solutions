@@ -1,5 +1,6 @@
-import { useState, ReactNode } from "react";
+import { ReactNode } from "react";
 import Image from "next/image";
+import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
@@ -7,12 +8,19 @@ import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "@formspree/react";
 import { Formik, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
-import {
-  useNotification,
-  NotificationContainer,
-} from "@/utils/useNotification";
 
-export default function Home() {
+type HomeSsp = {
+  year: number;
+};
+
+export const getServerSideProps: GetServerSideProps<HomeSsp> = async () => {
+  const year = new Date().getFullYear();
+  return { props: { year } };
+};
+
+export default function Home(
+  homeSsp: InferGetServerSidePropsType<typeof getServerSideProps>
+) {
   return (
     <main className="mx-auto flex min-h-screen flex-col justify-between">
       <div className="bg-primary">
@@ -438,7 +446,7 @@ export default function Home() {
                 </div>
                 <div className="mt-2">
                   <div>Hours of Operation</div>
-                  <div>By Appointment Only</div>
+                  <div>By Appointment</div>
                 </div>
               </div>
             </div>
@@ -450,7 +458,14 @@ export default function Home() {
                 </div>
                 <div className="mt-2">
                   <div>Email</div>
-                  <div>desertIVsolutions@gmail.com</div>
+                  <div>
+                    <a
+                      className="underline"
+                      href="mailto:DesertIVSolutions@gmail.com"
+                    >
+                      DesertIVSolutions@gmail.com
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -461,7 +476,11 @@ export default function Home() {
                 </div>
                 <div className="mt-2">
                   <div>Phone</div>
-                  <div>(480) 790-3045</div>
+                  <div>
+                    <a className="underline" href="tel:4807903045">
+                      (480) 790-3045
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -554,7 +573,7 @@ export default function Home() {
         </div>
       </ContentContainer>
 
-      <Footer />
+      <Footer {...homeSsp} />
     </main>
   );
 }
@@ -638,7 +657,7 @@ function Header1Item({ children }: Header1ItemProps) {
   return <div className="m-auto justify-self-center p-1">{children}</div>;
 }
 
-function Footer() {
+function Footer({ year }: HomeSsp) {
   return (
     <div className="bg-primary">
       <ContentContainer>
@@ -652,7 +671,7 @@ function Footer() {
             />
           </div>
           <h3 className="text-center">
-            Desert IV Solutions - 2022 - All Rights Reserved
+            Desert IV Solutions - {year} - All Rights Reserved
           </h3>
         </div>
       </ContentContainer>
