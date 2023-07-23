@@ -27,11 +27,11 @@ export default function Home(
         <ContentContainer disableYPadding>
           <div className="my-4 md:flex md:justify-between">
             <div className="flex justify-start gap-4">
-              <h2 className="hidden items-center sm:flex">
+              <h2 className="hidden items-center md:flex">
                 Desert IV Solutions
               </h2>
             </div>
-            <div className="flex justify-center">
+            <div className="mb-4 flex justify-center md:mb-0">
               <Image
                 src="/images/color-logo-no-bg.png"
                 width={200}
