@@ -25,30 +25,33 @@ export default function Home(
     <main className="mx-auto flex min-h-screen flex-col justify-between">
       <div className="bg-primary">
         <ContentContainer disableYPadding>
-          <div className="my-4 flex justify-between">
+          <div className="my-4 md:flex md:justify-between">
             <div className="flex justify-start gap-4">
-              <Image
-                src="/images/desert-icon-sm.svg"
-                width={50}
-                height={50}
-                alt="color-logo-no-bg"
-              />
               <h2 className="hidden items-center sm:flex">
                 Desert IV Solutions
               </h2>
-              {/* relative flex h-12 w-12 items-center justify-center rounded-full bg-fbBlue p-8 text-center */}
             </div>
-            <div>
-              <a
-                href="https://desertivsolutions.as.me/schedule.php"
-                target="_blank"
-                rel="noreferrer"
-                className="no-underline"
-              >
-                <div className="rounded-full border-4 border-black bg-primary p-4 text-center font-bold text-black">
-                  Schedule an Appointment!
-                </div>
-              </a>
+            <div className="flex justify-center">
+              <Image
+                src="/images/color-logo-no-bg.png"
+                width={200}
+                height={200}
+                alt="color-logo-no-bg"
+              />
+            </div>
+            <div className="flex justify-center gap-4">
+              <div className="items-center sm:flex">
+                <a
+                  href="https://desertivsolutions.as.me/schedule.php"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="no-underline"
+                >
+                  <div className="rounded-full border-4 border-black bg-primary p-4 text-center font-bold text-black">
+                    Schedule an Appointment!
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </ContentContainer>
@@ -84,7 +87,7 @@ export default function Home(
       </Header1> */}
 
       <div
-        className="bg-[url('/images/runner-bg.png')] py-8"
+        className="bg-[url('/images/first-2.JPG')] py-8"
         style={{
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
@@ -112,41 +115,6 @@ export default function Home(
               your body&apos;s unique needs. Whether you&apos;re prepping or
               recovering, IV Therapy should be on your list to do whenever
               possible.
-            </div>
-            <div className="flex justify-center drop-shadow-xl">
-              <a href="tel:4807903045">
-                <div className="rounded-full border-4 border-white bg-primary p-5 text-center font-bold">
-                  CALL NOW - (480) 790-3045
-                </div>
-              </a>
-            </div>
-          </div>
-        </ContentContainer>
-      </div>
-
-      <div
-        className="bg-[url('/images/group.png')] py-8"
-        style={{
-          backgroundPosition: "center center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          transition: "background 0.3s, border-radius 0.3s, opacity 0.3s",
-        }}
-      >
-        <ContentContainer>
-          <div id="section-2" className="grid gap-y-8 text-center text-white">
-            <h1 className="text-7xl drop-shadow-black">
-              Group IV Therapy in The East Valley
-            </h1>
-            <div className="text-3xl drop-shadow-black">
-              SCHEDULE YOUR PARTY&apos;S MOBILE IM TODAY!
-            </div>
-            <div className="text-xl drop-shadow-black">
-              Traveling to Mesa, Gilbert or Chandler with your group for an
-              event? No worries, we have you covered! We have plenty of
-              experience taking care of groups of any size. Our professional
-              staff will come out, make you feel comfortable, and help you feel
-              better right away! Our top priority is you.
             </div>
             <div className="flex justify-center drop-shadow-xl">
               <a href="tel:4807903045">
@@ -200,6 +168,41 @@ export default function Home(
             </div>
           </ContentContainer>
         </div>
+      </div>
+
+      <div
+        className="bg-[url('/images/group-3.png')] py-8"
+        style={{
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          transition: "background 0.3s, border-radius 0.3s, opacity 0.3s",
+        }}
+      >
+        <ContentContainer>
+          <div id="section-2" className="grid gap-y-8 text-center text-white">
+            <h1 className="text-7xl drop-shadow-black">
+              Group IV Therapy in The East Valley
+            </h1>
+            <div className="text-3xl drop-shadow-black">
+              SCHEDULE YOUR PARTY&apos;S MOBILE IM TODAY!
+            </div>
+            <div className="text-xl drop-shadow-black">
+              Traveling to Mesa, Gilbert or Chandler with your group for an
+              event? No worries, we have you covered! We have plenty of
+              experience taking care of groups of any size. Our professional
+              staff will come out, make you feel comfortable, and help you feel
+              better right away! Our top priority is you.
+            </div>
+            <div className="flex justify-center drop-shadow-xl">
+              <a href="tel:4807903045">
+                <div className="rounded-full border-4 border-white bg-primary p-5 text-center font-bold">
+                  CALL NOW - (480) 790-3045
+                </div>
+              </a>
+            </div>
+          </div>
+        </ContentContainer>
       </div>
 
       <ContentContainer>
@@ -272,7 +275,7 @@ export default function Home(
                 description="Rejuvenate your skin and help combat signs of aging. Youthful restoration that focuses on hair, skin and nails."
                 contents={[
                   "1 Liter of Normal Saline",
-                  "B Complex (B1,B2,B3,B5,B6)",
+                  "B Complex (B1, B2, B3, B5, B6)",
                   "Biotin",
                   "Vitamin C",
                 ]}
@@ -287,13 +290,43 @@ export default function Home(
                 description="Created by the late Dr. John Myers, this multivitamin cocktail is effective for acute asthma attacks, migraines, fatigue (including chronic fatigue syndrome), acute muscle spasms, colds, chronic sinusitis, seasonal allergies, chronic depression/anxiety and other disorders."
                 contents={[
                   "1 Liter of Normal Saline",
-                  "B Complex (B1,B2.B3,B5,B6)",
+                  "B Complex (B1, B2, B3, B5, B6)",
                   "B12",
                   "Glutathione",
                   "Vitamin C",
                   "Zinc",
                   "Magnesium",
                 ]}
+              />
+            </IVOptionGridItem>
+            <IVOptionGridItem>
+              <IVOption
+                title="Desert NAD+"
+                price={{ min: 350, max: 950 }}
+                // imageSrc="/images/desert-myers-cocktail.png"
+                imageSrc="/images/desert-nad-plus-3.jpeg"
+                imageAlt="desert-myers-cocktail"
+                description="NAD+ stands for Nicotinamide Adenine Dinucleotide, and is a cofactor found in each living cell.  NAD+ IV therapy does take longer to receive than other IVs - from 45 minutes to 3 hours, depending on tolerance. During the drip you might feel a bit of discomfort compared to standard vitamin drips but this is completely normal, can be controlled by how fast you set the IV to drip, and stops within a minute or two after the drip ends."
+                contents={[
+                  "NAD+",
+                  "1 Liter of Normal Saline",
+                  "B Complex (B1, B2, B3, B5, B6)",
+                  "B12",
+                  "Glutathione",
+                  "Vitamin C",
+                  "Zinc",
+                  "Magnesium",
+                ]}
+              />
+            </IVOptionGridItem>
+            <IVOptionGridItem>
+              <IVOption
+                title="Desert Weight Loss Option"
+                price={"Consult with us for pricing."}
+                imageSrc="/images/desert-weight-loss-option-4.jpeg"
+                imageAlt="desert-myers-cocktail"
+                description="Consult with us today if you're ready to get started with a weight management program."
+                contents={[]}
               />
             </IVOptionGridItem>
           </div>
@@ -313,20 +346,20 @@ export default function Home(
             </div>
             <div>
               <h1>Desert Add On&apos;s</h1>
-              <div>$25 - $35</div>
+              <div>$30 - $50</div>
               <div className="gap-2">
                 <li className="list-disc">Glutathione</li>
                 <li className="list-disc">Vitamin C</li>
                 <li className="list-disc">Zinc</li>
                 <li className="list-disc">Magnesium</li>
-                <li className="list-disc">Zofran -Anti-nausea </li>
+                <li className="list-disc">Zofran - Anti-nausea </li>
                 <li className="list-disc">
-                  Toradol- Anti-inflammatory/Pain reliever
+                  Toradol - Anti-inflammatory/Pain reliever
                 </li>
                 <li className="list-disc">
-                  Pepcid- Antacid/Heartburn reliever
+                  Pepcid - Antacid/Heartburn reliever
                 </li>
-                <li className="list-disc">Benadryl- Antihistamine</li>
+                <li className="list-disc">Benadryl - Antihistamine</li>
               </div>
             </div>
           </div>
@@ -336,7 +369,7 @@ export default function Home(
       <div className="bg-primary">
         <ContentContainer>
           <div id="section-4">
-            <div className="grid gap-y-8 md:grid-cols-2">
+            <div className="grid gap-y-8 text-center md:grid-cols-3">
               <div className="">
                 <h1>Group Discounts</h1>
                 <div>A great option for parties!</div>
@@ -359,6 +392,15 @@ export default function Home(
                   <div>
                     *Subject to availability - additional fees (collected prior
                     to the call)
+                  </div>
+                </div>
+              </div>
+              <div className="">
+                <h1>Across the Valley</h1>
+                <div>
+                  <div>
+                    An additional mileage charges may apply for clients greater
+                    than 25mi from South Gilbert.
                   </div>
                 </div>
               </div>
@@ -585,14 +627,33 @@ function IVOptionGridItem({ children }: IVOptionGridItem) {
   return <div className="w-full justify-self-center p-1">{children}</div>;
 }
 
+interface PriceRange {
+  min: number;
+  max: number;
+}
+
+type IVOptionPropsPrice = string | number | PriceRange;
+
 type IVOptionProps = {
   title: string;
-  price: number;
+  price: IVOptionPropsPrice;
   imageSrc: string;
   imageAlt: string;
   description: string;
   contents: string[];
 };
+
+function formatPrice(price: IVOptionPropsPrice): string {
+  if (typeof price === "string") {
+    return price;
+  }
+
+  if (typeof price === "number") {
+    return `$${price}`;
+  }
+
+  return `$${price.min} - $${price.max}`;
+}
 
 function IVOption({
   title,
@@ -621,7 +682,7 @@ function IVOption({
         </div>
       </div>
       <div className="px-2 pb-4">
-        <div className="m-2 text-center font-bold">${price}</div>
+        <div className="m-2 text-center font-bold">{formatPrice(price)}</div>
         <a
           href="https://desertivsolutions.as.me/schedule.php"
           target="_blank"
