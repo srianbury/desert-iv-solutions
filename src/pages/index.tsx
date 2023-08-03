@@ -185,7 +185,7 @@ export default function Home(
               Group IV Therapy in The East Valley
             </h1>
             <div className="text-3xl drop-shadow-black">
-              SCHEDULE YOUR PARTY&apos;S MOBILE IM TODAY!
+              SCHEDULE YOUR PARTY&apos;S MOBILE IV TODAY!
             </div>
             <div className="text-xl drop-shadow-black">
               Traveling to Mesa, Gilbert or Chandler with your group for an
