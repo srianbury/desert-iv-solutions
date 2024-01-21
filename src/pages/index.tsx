@@ -222,7 +222,7 @@ export default function Home(
             <IVOptionGridItem>
               <IVOption
                 title="Desert Cold/Flu (Feeling under the weather)"
-                price={165}
+                price={185}
                 imageSrc="/images/desert-cold-flu.png"
                 imageAlt="desert-cold-flu"
                 description="Feeling sick? Give your immune system an additional layer of protection."
@@ -346,7 +346,7 @@ export default function Home(
             </div>
             <div>
               <h1>Desert Add On&apos;s</h1>
-              <div>$30 - $50</div>
+              <div>$30 - $60</div>
               <div className="gap-2">
                 <li className="list-disc">Glutathione</li>
                 <li className="list-disc">Vitamin C</li>
