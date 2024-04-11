@@ -42,7 +42,7 @@ export default function Home(
             <div className="flex justify-center gap-4">
               <div className="items-center sm:flex">
                 <a
-                  href="https://desertivsolutions.as.me/schedule.php"
+                  href="https://www.myaestheticspro.com/BN/index.cfm?EE520EDAE2F609652619E91B2BC2B608"
                   target="_blank"
                   rel="noreferrer"
                   className="no-underline"
@@ -87,7 +87,7 @@ export default function Home(
       </Header1> */}
 
       <div
-        className="bg-[url('/images/first-2.JPG')] py-8"
+        className="bg-[url('/images/iv-solution.png')] py-8"
         style={{
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
@@ -158,7 +158,7 @@ export default function Home(
                 </div>
                 <div className="m-auto justify-self-center p-1">
                   <Image
-                    src="/images/hydrate-and-revitalize.png"
+                    src="/images/riza-iv-2.png"
                     width={1000}
                     height={1000}
                     alt="hydrate-and-revitalize"
@@ -326,6 +326,16 @@ export default function Home(
                 imageSrc="/images/desert-weight-loss-option-4.jpeg"
                 imageAlt="desert-myers-cocktail"
                 description="Consult with us today if you're ready to get started with a weight management program."
+                contents={[]}
+              />
+            </IVOptionGridItem>
+            <IVOptionGridItem>
+              <IVOption
+                title="Botox"
+                price={"Call us for a consultation!"}
+                imageSrc="/images/botox-square.png"
+                imageAlt="botox"
+                description="Botox injections are shots that use a toxin to prevent a muscle from moving for a limited time. These shots are often used to smooth wrinkles on the face. They're also used to treat neck spasms, sweating, overactive bladder, lazy eye and other conditions. Botox shots also may help prevent migraine."
                 contents={[]}
               />
             </IVOptionGridItem>
@@ -684,7 +694,7 @@ function IVOption({
       <div className="px-2 pb-4">
         <div className="m-2 text-center font-bold">{formatPrice(price)}</div>
         <a
-          href="https://desertivsolutions.as.me/schedule.php"
+          href="https://www.myaestheticspro.com/BN/index.cfm?EE520EDAE2F609652619E91B2BC2B608"
           target="_blank"
           rel="noreferrer"
           className="no-underline"
