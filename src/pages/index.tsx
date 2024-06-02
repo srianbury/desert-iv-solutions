@@ -41,12 +41,7 @@ export default function Home(
             </div>
             <div className="flex justify-center gap-4">
               <div className="items-center sm:flex">
-                <a
-                  href="https://www.myaestheticspro.com/BN/index.cfm?EE520EDAE2F609652619E91B2BC2B608"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="no-underline"
-                >
+                <a href="tel:4807903045">
                   <div className="rounded-full border-4 border-black bg-primary p-4 text-center font-bold text-black">
                     Schedule an Appointment!
                   </div>
@@ -693,12 +688,7 @@ function IVOption({
       </div>
       <div className="px-2 pb-4">
         <div className="m-2 text-center font-bold">{formatPrice(price)}</div>
-        <a
-          href="https://www.myaestheticspro.com/BN/index.cfm?EE520EDAE2F609652619E91B2BC2B608"
-          target="_blank"
-          rel="noreferrer"
-          className="no-underline"
-        >
+        <a href="tel:4807903045">
           <div className="rounded-full border-4 border-primary bg-primary p-4 text-center font-bold text-black hover:border-black">
             Book Now!
           </div>
