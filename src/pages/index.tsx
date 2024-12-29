@@ -206,24 +206,116 @@ export default function Home(
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             <IVOptionGridItem>
               <IVOption
-                title="Desert Simply Dry (rehydrate)"
-                price={110}
-                imageSrc="/images/desert-simply-dry.png"
-                imageAlt="desert-simply-dry"
-                description="A quick relief at home with basic IV fluid, no additional vitamins or medicine."
-                contents={["1 Liter of Normal saline"]}
+                title="Desert Mega Myers"
+                price={300}
+                imageSrc="/images/mega.jpg"
+                imageAlt="mega"
+                description="Elevate your wellness with the Desert Mega Myers, the ultimate cocktail for those seeking complete rejuvenation. This powerhouse blend is packed with hydration, essential vitamins, antioxidants, and electrolytes to boost energy, enhance mental clarity, and support overall health."
+                contents={[
+                  "1 liter of normal saline",
+                  "Glutathione 1000 mg",
+                  "Magnesium",
+                  "B Complex (B1, B2, B3, B5, B6)",
+                  "B12",
+                  "Vitamin C 5000 mg",
+                  "Zinc",
+                ]}
               />
             </IVOptionGridItem>
             <IVOptionGridItem>
               <IVOption
-                title="Desert Cold/Flu (Feeling under the weather)"
-                price={185}
-                imageSrc="/images/desert-cold-flu.png"
-                imageAlt="desert-cold-flu"
-                description="Feeling sick? Give your immune system an additional layer of protection."
+                title="Desert Myers (Wellness for All)"
+                price={220}
+                imageSrc="/images/desert-myers-cocktail.png"
+                imageAlt="desert-myers-cocktail"
+                description="Created by the late Dr. John Myers, this multivitamin cocktail is effective for acute asthma attacks, migraines, fatigue (including chronic fatigue syndrome), acute muscle spasms, colds, chronic sinusitis, seasonal allergies, chronic depression/anxiety and other disorders."
                 contents={[
-                  "1 Liter of Normal Saline",
+                  "1 liter of normal saline",
                   "B Complex (B1, B2, B3, B5, B6)",
+                  "B12",
+                  "Glutathione 500 mg",
+                  "Vitamin C 2500 mg",
+                  "Zinc",
+                  "Magnesium",
+                ]}
+              />
+            </IVOptionGridItem>
+            <IVOptionGridItem>
+              <IVOption
+                title="Desert NAD+"
+                price="$1 per mg + cost of fluids"
+                // imageSrc="/images/desert-myers-cocktail.png"
+                imageSrc="/images/desert-nad-plus-3.jpeg"
+                imageAlt="desert-myers-cocktail"
+                description="NAD+ stands for Nicotinamide Adenine Dinucleotide and is a cofactor found in each living cell.  NAD+ IV therapy does take longer to receive than other IVs - from 45 minutes to 3 hours, depending on tolerance. During the drip you might feel a bit of discomfort compared to standard vitamin drips but this is completely normal, can be controlled by how fast you set the IV to drip, and stops within a minute or two after the drip ends."
+                contents={["1 liter of normal saline", "NAD+"]}
+              />
+            </IVOptionGridItem>
+            <IVOptionGridItem>
+              <IVOption
+                title="Desert Toxin (Food Poisoning)"
+                price={295}
+                imageSrc="/images/desert-toxin.jpg"
+                imageAlt="desert-toxin"
+                description="Recover quickly and comfortably.  This cocktail is designed to rehydrate your body and replenish essential nutrients lost due to vomiting or diarrhea. This treatment combines fluids, electrolytes, anti-nausea medication, and vitamins to soothe your symptoms and restore balance."
+                contents={[
+                  "1 liter of normal saline or Lactated Ringer",
+                  "B Complex (B1, B2, B3, B5, B6)",
+                  "B12",
+                  "Vitamin C",
+                  "Glutathione",
+                  "Zinc",
+                  "Anti-nausea (Zofran)",
+                  "Anti-inflamatory (Toradol)",
+                ]}
+              />
+            </IVOptionGridItem>
+            <IVOptionGridItem>
+              <IVOption
+                title="Desert Peds"
+                price={180}
+                imageSrc="/images/peds.jpg"
+                imageAlt="peds"
+                description="When your little one needs fast and effective hydration.  This cocktail replenishes fluids, electrolytes, and essential nutrients to help with dehydration caused by illness, fever, vomiting, or other conditions.  For ages 2-17."
+                contents={[
+                  "500 mL of Lactated Ringers",
+                  "B12 0.5 mg",
+                  "B Complex (B1, B2, B3, B5, B6)",
+                  "Vitamin C 500 mg",
+                  "Glutathione 200 mg",
+                  "Magnesium 100 mg",
+                  "Zinc 10 mg",
+                ]}
+              />
+            </IVOptionGridItem>
+            <IVOptionGridItem>
+              <IVOption
+                title="Desert Thorn (Migraine IV)"
+                price={275}
+                imageSrc="/images/migraine.jpg"
+                imageAlt="migraine"
+                description="Designed to ease headache pain, reduce inflammation, and relax tension, this therapy works quickly to provide the relief you need. Whether you’re battling chronic migraines or a sudden episode, our Migraine Relief IV helps restore balance and get you back to feeling like yourself."
+                contents={[
+                  "1 liter of normal saline",
+                  "Pain medicine (Toradol)",
+                  "Anti-nausea (Zofran)",
+                  "Magnesium",
+                  "Antihistamine (Benadryl)",
+                  "Steroid (Decadron)",
+                ]}
+              />
+            </IVOptionGridItem>
+            <IVOptionGridItem>
+              <IVOption
+                title="Desert Cold & Flu (Feeling Under the Weather)"
+                price={295}
+                imageSrc="/images/cold-and-flu-3.jpg"
+                imageAlt="cold-and-flu"
+                description="Fight back against cold and flu symptoms.  This is specially designed to boost your immune system and speed up recovery. Packed with hydration, vitamins like C and B-complex, zinc, and antioxidants, this treatment helps reduce fatigue, body aches, and congestion while supporting your body's natural defenses."
+                contents={[
+                  "1 liter of normal saline",
+                  "B Complex (B1, B2, B3, B5, B6)",
+                  "Glutathione",
                   "B12",
                   "Vitamin C",
                   "Zinc",
@@ -233,91 +325,69 @@ export default function Home(
             <IVOptionGridItem>
               <IVOption
                 title="Desert Prickly Pear (Hangover Relief)"
-                price={175}
+                price={275}
                 imageSrc="/images/desert-prickly-pear.png"
                 imageAlt="desert-prickly-pear"
-                description="Long night of overindulgence? We will help you reverse those symptoms and feel better."
+                description="Bounce back from a rough night.  This revitalizing cocktail replenishes lost fluids, restores essential electrolytes, and delivers a powerful dose of vitamins and antioxidants to help detox your body and relieve hangover symptoms like headache, nausea, and exhaustion."
                 contents={[
-                  "1 Liter of Normal saline",
+                  "1 liter of normal saline",
                   "B Complex (B1, B2, B3, B5, B6)",
-                  "Anti-nausea",
-                  "Anti-inflammatory reliever",
+                  "B12",
+                  "Anti-nausea (Zofran)",
+                  "Anti-inflammatory reliever (Toradol)",
+                  "Glutathione",
+                  "Pepcid",
                 ]}
               />
             </IVOptionGridItem>
             <IVOptionGridItem>
               <IVOption
-                title="Desert A Performance (Athletic recovery)"
-                price={195}
-                imageSrc="/images/desert-a-performance.png"
-                imageAlt="desert-a-performance"
-                description="For athletes or fitness enthusiasts, this IV Drip combines fluids antioxidants and pain relievers that will help optimize your fitness potential for faster recovery."
+                title="Desert Performance (Athletic Recovery)"
+                price={265}
+                imageSrc="/images/athletic-performance.jpg"
+                imageAlt="athletic-performance.jpg"
+                description="For athletes or fitness enthusiasts, this IV cocktail combines fluids, antioxidants, and pain relievers that will help optimize your fitness potential for faster recovery."
                 contents={[
-                  "1 Liter of Normal Saline",
+                  "1 liter of normal saline",
                   "B Complex (B1, B2, B3, B5, B6)",
+                  "B12",
                   "Amino Blend",
                   "Mineral Blend",
                   "Vitamin C",
+                  "Taurine",
                 ]}
               />
             </IVOptionGridItem>
             <IVOptionGridItem>
               <IVOption
-                title="Desert Beauty (For skin, nails & hair)"
-                price={185}
+                title="Desert Beauty (For Skin, Nails, & Hair)"
+                price={255}
                 imageSrc="/images/desert-beauty.png"
                 imageAlt="desert-beauty"
-                description="Rejuvenate your skin and help combat signs of aging. Youthful restoration that focuses on hair, skin and nails."
+                description="Rejuvenate your skin and help combat signs of aging. Youthful restoration that focuses on hair, skin, and nails."
                 contents={[
-                  "1 Liter of Normal Saline",
+                  "1 liter of normal saline",
                   "B Complex (B1, B2, B3, B5, B6)",
                   "Biotin",
                   "Vitamin C",
+                  "NAD",
                 ]}
               />
             </IVOptionGridItem>
             <IVOptionGridItem>
               <IVOption
-                title="Desert Myer's Cocktail (Wellness for all)"
-                price={200}
-                imageSrc="/images/desert-myers-cocktail.png"
-                imageAlt="desert-myers-cocktail"
-                description="Created by the late Dr. John Myers, this multivitamin cocktail is effective for acute asthma attacks, migraines, fatigue (including chronic fatigue syndrome), acute muscle spasms, colds, chronic sinusitis, seasonal allergies, chronic depression/anxiety and other disorders."
-                contents={[
-                  "1 Liter of Normal Saline",
-                  "B Complex (B1, B2, B3, B5, B6)",
-                  "B12",
-                  "Glutathione",
-                  "Vitamin C",
-                  "Zinc",
-                  "Magnesium",
-                ]}
-              />
-            </IVOptionGridItem>
-            <IVOptionGridItem>
-              <IVOption
-                title="Desert NAD+"
-                price={{ min: 350, max: 950 }}
-                // imageSrc="/images/desert-myers-cocktail.png"
-                imageSrc="/images/desert-nad-plus-3.jpeg"
-                imageAlt="desert-myers-cocktail"
-                description="NAD+ stands for Nicotinamide Adenine Dinucleotide, and is a cofactor found in each living cell.  NAD+ IV therapy does take longer to receive than other IVs - from 45 minutes to 3 hours, depending on tolerance. During the drip you might feel a bit of discomfort compared to standard vitamin drips but this is completely normal, can be controlled by how fast you set the IV to drip, and stops within a minute or two after the drip ends."
-                contents={[
-                  "NAD+",
-                  "1 Liter of Normal Saline",
-                  "B Complex (B1, B2, B3, B5, B6)",
-                  "B12",
-                  "Glutathione",
-                  "Vitamin C",
-                  "Zinc",
-                  "Magnesium",
-                ]}
+                title="Desert Simply Dry (Rehydrate)"
+                price={120}
+                imageSrc="/images/desert-simply-dry.png"
+                imageAlt="desert-simply-dry"
+                description="A quick relief at home with basic IV fluid, no additional vitamins or medicine."
+                contents={["1 liter of normal saline"]}
               />
             </IVOptionGridItem>
             <IVOptionGridItem>
               <IVOption
                 title="Desert Weight Loss Option"
-                price={"Consult with us for pricing."}
+                price={"Call us for a consultation!"}
                 imageSrc="/images/desert-weight-loss-option-4.jpeg"
                 imageAlt="desert-myers-cocktail"
                 description="Consult with us today if you're ready to get started with a weight management program."
@@ -326,11 +396,11 @@ export default function Home(
             </IVOptionGridItem>
             <IVOptionGridItem>
               <IVOption
-                title="Botox"
+                title="Desert Botox"
                 price={"Call us for a consultation!"}
                 imageSrc="/images/botox-square.png"
                 imageAlt="botox"
-                description="Botox injections are shots that use a toxin to prevent a muscle from moving for a limited time. These shots are often used to smooth wrinkles on the face. They're also used to treat neck spasms, sweating, overactive bladder, lazy eye and other conditions. Botox shots also may help prevent migraine."
+                description="Botox injections are shots that use a toxin to prevent a muscle from moving for a limited time. These shots are often used to smooth wrinkles on the face. They're also used to treat neck spasms, sweating, overactive bladder, lazy eye, and other conditions. Botox shots also may help prevent migraine."
                 contents={[]}
               />
             </IVOptionGridItem>
@@ -357,7 +427,8 @@ export default function Home(
                 <li className="list-disc">Vitamin C</li>
                 <li className="list-disc">Zinc</li>
                 <li className="list-disc">Magnesium</li>
-                <li className="list-disc">Zofran - Anti-nausea </li>
+                <li className="list-disc">NAC</li>
+                <li className="list-disc">Zofran - Anti-nausea</li>
                 <li className="list-disc">
                   Toradol - Anti-inflammatory/Pain reliever
                 </li>
@@ -507,7 +578,7 @@ export default function Home(
                   <div>Email</div>
                   <div>
                     <a
-                      className="underline"
+                      className="break-words underline"
                       href="mailto:DesertIVSolutions@gmail.com"
                     >
                       DesertIVSolutions@gmail.com
@@ -676,7 +747,7 @@ function IVOption({
         </div>
         <div className="px-4">
           <h3>{title}</h3>
-          <div>{description}</div>
+          <div className="pb-4 pt-2">{description}</div>
           <div className="gap-2">
             {contents.map((content) => (
               <li className="list-disc" key={content}>
