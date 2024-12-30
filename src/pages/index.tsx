@@ -272,7 +272,7 @@ export default function Home(
             </IVOptionGridItem>
             <IVOptionGridItem>
               <IVOption
-                title="Desert Peds"
+                title="Desert Kids"
                 price={180}
                 imageSrc="/images/peds.jpg"
                 imageAlt="peds"
