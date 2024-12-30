@@ -247,7 +247,7 @@ export default function Home(
                 // imageSrc="/images/desert-myers-cocktail.png"
                 imageSrc="/images/desert-nad-plus-3.jpeg"
                 imageAlt="desert-myers-cocktail"
-                description="NAD+ stands for Nicotinamide Adenine Dinucleotide and is a cofactor found in each living cell.  NAD+ IV therapy does take longer to receive than other IVs - from 45 minutes to 3 hours, depending on tolerance. During the drip you might feel a bit of discomfort compared to standard vitamin drips but this is completely normal, can be controlled by how fast you set the IV to drip, and stops within a minute or two after the drip ends."
+                description="NAD+ stands for Nicotinamide Adenine Dinucleotide and is a coenzyme found in each living cell.  NAD+ IV therapy does take longer to receive than other IVs - from 45 minutes to 3 hours, depending on tolerance. During the drip you might feel a bit of discomfort compared to standard vitamin drips but this is completely normal, can be controlled by how fast you set the IV to drip, and stops within a minute or two after the drip ends."
                 contents={["1 liter of normal saline", "NAD+"]}
               />
             </IVOptionGridItem>
