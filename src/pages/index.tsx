@@ -423,19 +423,21 @@ export default function Home(
               <h1>Desert Add On&apos;s</h1>
               <div>$30 - $60</div>
               <div className="gap-2">
-                <li className="list-disc">Glutathione</li>
-                <li className="list-disc">Vitamin C</li>
-                <li className="list-disc">Zinc</li>
-                <li className="list-disc">Magnesium</li>
-                <li className="list-disc">NAC</li>
-                <li className="list-disc">Zofran - Anti-nausea</li>
-                <li className="list-disc">
+                <li className="list-inside list-disc">Glutathione</li>
+                <li className="list-inside list-disc">Vitamin C</li>
+                <li className="list-inside list-disc">Zinc</li>
+                <li className="list-inside list-disc">Magnesium</li>
+                <li className="list-inside list-disc">NAC</li>
+                <li className="list-inside list-disc">Zofran - Anti-nausea</li>
+                <li className="list-inside list-disc">
                   Toradol - Anti-inflammatory/Pain reliever
                 </li>
-                <li className="list-disc">
+                <li className="list-inside list-disc">
                   Pepcid - Antacid/Heartburn reliever
                 </li>
-                <li className="list-disc">Benadryl - Antihistamine</li>
+                <li className="list-inside list-disc">
+                  Benadryl - Antihistamine
+                </li>
               </div>
             </div>
           </div>
@@ -450,11 +452,13 @@ export default function Home(
                 <h1>Group Discounts</h1>
                 <div>A great option for parties!</div>
                 <div className="gap-2">
-                  <li className="list-disc">
+                  <li className="list-inside list-disc">
                     10% discount for four to nine patients
                   </li>
-                  <li className="list-disc">15% discount for 10-19 patients</li>
-                  <li className="list-disc">
+                  <li className="list-inside list-disc">
+                    15% discount for 10-19 patients
+                  </li>
+                  <li className="list-inside list-disc">
                     20% discount for 20 patients and above
                   </li>
                 </div>
@@ -508,12 +512,14 @@ export default function Home(
               </div>
               <div>Benefits of Our IV therapy </div>
               <div className="gap-2">
-                <li className="list-disc">Increase energy</li>
-                <li className="list-disc">Boost immunity</li>
-                <li className="list-disc">Cleanse and Detox</li>
-                <li className="list-disc">Instant Hydration </li>
-                <li className="list-disc">Immediate results</li>
-                <li className="list-disc">100% vitamin absorption</li>
+                <li className="list-inside list-disc">Increase energy</li>
+                <li className="list-inside list-disc">Boost immunity</li>
+                <li className="list-inside list-disc">Cleanse and Detox</li>
+                <li className="list-inside list-disc">Instant Hydration </li>
+                <li className="list-inside list-disc">Immediate results</li>
+                <li className="list-inside list-disc">
+                  100% vitamin absorption
+                </li>
               </div>
             </div>
           </ContentContainer>
@@ -750,7 +756,7 @@ function IVOption({
           <div className="pb-4 pt-2">{description}</div>
           <div className="gap-2">
             {contents.map((content) => (
-              <li className="list-disc" key={content}>
+              <li className="list-inside list-disc" key={content}>
                 {content}
               </li>
             ))}
